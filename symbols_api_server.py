@@ -1,9 +1,11 @@
 # symbols_api_server.py
 
 from flask import Flask, jsonify, send_from_directory
+from flask_cors import CORS
 import os
 
 app = Flask(__name__, static_folder='public')
+CORS(app, origins=["https://algomin-ui-production.up.railway.app"])
 
 @app.route("/symbols.json")
 def get_symbols():
