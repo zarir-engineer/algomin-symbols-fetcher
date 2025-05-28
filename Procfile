@@ -1,1 +1,1 @@
-web: python symbols_api_server.py
+web: gunicorn symbols_api_server:app --bind 0.0.0.0:$PORT
