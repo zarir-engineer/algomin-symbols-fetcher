@@ -1,0 +1,4 @@
+[[jobs]]
+name = "fetch-nse-symbols"
+schedule = "0 3 * * *"
+command = "python fetch_symbols.py"
