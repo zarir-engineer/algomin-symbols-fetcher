@@ -5,7 +5,8 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__, static_folder='public')
-CORS(app, origins=["https://algomin-ui-production.up.railway.app"])
+# 🚨 This is the critical part
+CORS(app, resources={r"/symbols.json": {"origins": "*"}})
 
 @app.route("/symbols.json")
 def get_symbols():
